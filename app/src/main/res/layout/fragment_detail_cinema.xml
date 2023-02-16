@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.detail.DetailCinemaFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/image_cinema_detail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/txt_status_cinema_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic|bold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        tools:text="100"
+        app:layout_constraintTop_toBottomOf="@id/image_cinema_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/txt_cinema_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textStyle="italic|bold"
+        android:padding="10dp"
+        tools:text="NAME"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf= "@id/txt_status_cinema_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="close"
+        android:backgroundTint="#070707"
+        android:textSize="20dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_cinema_detail"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

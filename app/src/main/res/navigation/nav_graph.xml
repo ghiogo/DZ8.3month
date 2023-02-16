@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/catFragment"
+        android:name="com.example.dz83month.fragments.CatFragment"
+        android:label="fragment_cat"
+        tools:layout="@layout/fragment_cat" >
+        <action
+            android:id="@+id/action_catFragment_to_detailCatFragment"
+            app:destination="@id/detailCatFragment" />
+        <action
+            android:id="@+id/action_catFragment_to_edCatFragment3"
+            app:destination="@id/edCatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dz83month.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.example.dz83month.fragments.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" >
+        <action
+            android:id="@+id/action_languageFragment_to_detailLanguageFragment"
+            app:destination="@id/detailLanguageFragment" />
+        <action
+            android:id="@+id/action_languageFragment_to_edLanguageFragment"
+            app:destination="@id/edLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cinemaFragment"
+        android:name="com.example.dz83month.fragments.CinemaFragment"
+        android:label="fragment_cinema"
+        tools:layout="@layout/fragment_cinema" >
+        <action
+            android:id="@+id/action_cinemaFragment_to_detailCinemaFragment"
+            app:destination="@id/detailCinemaFragment" />
+        <action
+            android:id="@+id/action_cinemaFragment_to_edCinemaFragment"
+            app:destination="@id/edCinemaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCinemaFragment"
+        android:name="com.example.dz83month.fragments.detail.DetailCinemaFragment"
+        android:label="DetailCinemaFragment" />
+    <fragment
+        android:id="@+id/detailLanguageFragment"
+        android:name="com.example.dz83month.fragments.detail.DetailLanguageFragment"
+        android:label="DetailLanguageFragment" />
+    <fragment
+        android:id="@+id/detailCatFragment"
+        android:name="com.example.dz83month.fragments.detail.DetailCatFragment"
+        android:label="fragment_detail_language"
+        tools:layout="@layout/fragment_detail_language" />
+    <fragment
+        android:id="@+id/edCinemaFragment"
+        android:name="com.example.dz83month.fragments.edittext.EdCinemaFragment"
+        android:label="EdCinemaFragment" >
+        <action
+            android:id="@+id/action_edCinemaFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/edLanguageFragment"
+        android:name="com.example.dz83month.fragments.edittext.EdLanguageFragment"
+        android:label="EdLanguageFragment" >
+        <action
+            android:id="@+id/action_edLanguageFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/edCatFragment"
+        android:name="com.example.dz83month.fragments.edittext.EdCatFragment"
+        android:label="fragment_ed_language"
+        tools:layout="@layout/fragment_ed_language" >
+        <action
+            android:id="@+id/action_edCatFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+    </fragment>
+</navigation>
